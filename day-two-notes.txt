@@ -1,0 +1,15 @@
+7/16/2019
+
+Version Control System (VCS): Lets you control old and new version of code. This is useful
+for when you need to look back at old code or when to programmers are working on the same
+code.
+
+Types of VCS: Git, SVN, HG, TFS
+Git is the most popular
+
+Centralized VCS vs Distributed VCS
+    ^                            ^
+    |                            |
+All stored in one place        All the computers have all the code, so there are multiple
+and you only get what you     copies of the code on all the computers that are working
+need on your laptop            on the same project.
