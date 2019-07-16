@@ -1,0 +1,19 @@
+Classes and Objects
+combine data and related behavior into one unit
+
+conventionally one class per file
+Then name of class is the same as the file name
+    ex. Program.cs = class Program
+
+conventionally namespace matches folder structure
+
+Object is an instance of a class
+
+Solution (bag of Projects) - .sin file
+Project/ Assembly (Physical organization of classses) - .csproj files
+    Namespace (Name of golder your in; logical organization of Classes)
+         Class -> .cs files
+            fields
+            properties
+            methods
+ 
