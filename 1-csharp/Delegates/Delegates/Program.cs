@@ -123,7 +123,7 @@ namespace Delegates
             //take can discard extra elementssffrom end of list
             list.Take(2); //only grabs the first two elements of the list
 
-            var abc = list.Where(x => x != null)
+            var abc = list.Where(x => !string.IsNullOrEmpty(x))
                            .Select(x => x[0])
                            .Reverse(); // all first characters, in revers order
 
@@ -148,9 +148,84 @@ namespace Delegates
                        where x != null
                        select x[0]).Reverse();
 
+            var c = 3;
+            var d = 4;
+            Swap(ref c, ref d);
+
+            //now a should be 4 and b should be 3
+            //ref makes this possible
+
+            // ref lets you truly pass variables by referenced in C#
+
+            //unsafe
+            //{
+            //    //unsave blocks grabage collectoe does not operate
+            //    int x = 3;
+            //    int* p = &x;
+            //    //unsafe code allows interopablility with unmanaged code
+            //    //like windows Apis and other c code
+            //}
+        }
+
+        public static void OutParameters()
+        {
+            //out also passes variables by reference...
+            //but it must be a new uninitalized variable
+
+            var str = "1234";
+            int number;
+            try
+            {
+                number = int.Parse(str);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("INVALID!");
+            }
+
+            //with out we can hace a method effedctively return ttow different things
+            // we cant send any data INTO the method with out but we can pull data out
+            if(int.TryParse(str, out int result)){
+                //in here result is a int containing the valid number
+            }
+            else
+            {
+                //in here it did not parse correctly
+            }
+            //out here
+
+            //ref can do everything out can do and more
+            //should use out when you can because ref is
+            //more of a performance issue
+
+            object o = 3.4;
+
+            //this is a down cast to double but with safe way to handle case where it is not double
+            if(o is double num)
+            {
+                //in here num is the double if it is really a number
+
+            }
+
+            var num3 = o as string ?? "default";
+            //will be "defult" if it was not really a string
+
+            var num2 = (o as string);
+            //will be null if it was not really a string
+
+            //?? null conditional operator
+            //a??b returns a if it's not null otherwise b
         }
 
 
+        // swap
+        //swap two variables values
+        public static void Swap<T>(ref T value1, ref T value2)
+        {
+            T swap = value1;
+            value1 = value2;
+            value2 = swap;
+        }
         
         
     }

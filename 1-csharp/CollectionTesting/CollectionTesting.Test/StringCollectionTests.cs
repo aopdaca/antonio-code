@@ -176,19 +176,10 @@ namespace CollectionTesting.Test
 
         }
 
-        public void TryOut
-
-
-
-
-
-
-
-
-
-
-
-
+        public void TryOutCtor()
+        {
+            var x = new StringCollection(new[] { "abc", "abc" });
+        }
 
     }
 }

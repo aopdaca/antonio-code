@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    @*Razpr Syntax*@
+    <p>@DateTime.Now</p>
+    @* this is a Razor Expression - we write any c# expressrion and it wiill be exectufead*@
+
+    @(2+2) @* diplays 4*@
+
+    @* with braces, we can do "Razor Baocks" *@
+
+    @{ 
+        var name = "Nick;";
+        name += " Escalante";
+    }
+
+    <p>name</p>
+</div>
+;
