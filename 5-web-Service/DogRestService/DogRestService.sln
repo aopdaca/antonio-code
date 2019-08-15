@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogRestService.API", "DogRestService.API\DogRestService.API.csproj", "{5EBA32E6-D7A9-461D-B1B6-C2E0BE8D65F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogRestService.DAL", "DogRestService.DAL\DogRestService.DAL.csproj", "{4959F411-E072-4BD6-9AF9-5645EF2379C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EBA32E6-D7A9-461D-B1B6-C2E0BE8D65F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EBA32E6-D7A9-461D-B1B6-C2E0BE8D65F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EBA32E6-D7A9-461D-B1B6-C2E0BE8D65F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EBA32E6-D7A9-461D-B1B6-C2E0BE8D65F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4959F411-E072-4BD6-9AF9-5645EF2379C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4959F411-E072-4BD6-9AF9-5645EF2379C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4959F411-E072-4BD6-9AF9-5645EF2379C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4959F411-E072-4BD6-9AF9-5645EF2379C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {447B5211-D526-4550-A484-017313DA6B28}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MovieSite.App.Models.MovieViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @* HTML helpers like DisplayNameFor and DisplayFor
+                    look at the DataAnnotations attributes on the model class *@
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @* "HTML helpers" one kind of syntax for some extra Razor behavior *@
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @if (item.ReleaseYear != 0)
+                {
+                    @Html.DisplayFor(modelItem => item.ReleaseYear)
+                }
+            </td>
+            <td>
+                @if (item.Genre != null)
+                {
+                    @Html.DisplayFor(modelItem => item.Genre)
+                }
+                else
+                {
+                    @* "@:" forces interpretation as HTML instead of C# *@
+
+                    @:N/A
+                }
+                @*@(item.Genre?.Name ?? "N/A")*@
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
